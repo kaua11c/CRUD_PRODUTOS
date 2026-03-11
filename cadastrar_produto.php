@@ -30,14 +30,27 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
     
 ?>
+<div class="form_card_cadastro">
+    <form class="cadastro_de_produto" action="" method="POST">
+        <div class="campos_form">
+            <label class="label_camposCadastroProduto">Nome do produto: </label>
+            <input class="campoCadastroProduto" type="text" name="nome_produto" placeholder="Insira o nome do produto..."> 
+        </div>
+        <div class="campos_form">
+            <label class="label_camposCadastroProduto">Preço:</label>
+            <input class="campoCadastroProduto" type="number" name="preco" step="0.01" placeholder="Insira o preço do produto...">
+        </div>
+        <div class="campos_form">
+            <input class="botaoCadastroProduto" type="submit" value="Cadastrar">
+        </div>
+            
+            
+            
+        
+    </form>
+</div>
 
-<form class="cadastro_de_produto" action="" method="POST">
-    <label class="label_camposCadastroProduto">Nome do produto: </label>
-    <input class="campoCadastroProduto" type="text" name="nome_produto" placeholder="Insira o nome do produto..."> 
-    <label class="label_camposCadastroProduto">Preço:</label>
-    <input class="campoCadastroProduto" type="number" name="preco" step="0.01" placeholder="Insira o preço do produto...">
-    <input class="botaoCadastroProduto" type="submit" value="Cadastrar">
-</form>
+
 
 <?php 
     require_once 'template/footer.php';

@@ -21,6 +21,7 @@ html {
     gap:20px;
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .opcao_acao_produto{ /* li do menu */
@@ -34,6 +35,23 @@ html {
     color: black;
 
 
+}
+
+/* CADASTRO DE PRODUTOS */
+
+.form_card_cadastro {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 20px;
+    margin: auto;
+    padding: auto;
+    
+}
+
+.campos_form {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px;
 }
 
 /* FOOTER */
