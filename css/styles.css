@@ -54,6 +54,36 @@ html {
     margin: 20px;
 }
 
+/* LISTAR PRODUTOS */
+
+.listaProdutos {
+    width: 300px;
+    margin: auto;
+    padding: auto;
+    border: 2px solid #000000;
+    border-collapse: collapse;
+}
+
+.cabecalhoListaProdutos {
+    background-color: rgb(150, 150, 150);
+    border: 2px solid #000000;
+
+}
+
+.cabecalhoListaProdutos th{ 
+    border: 2px solid #000000;
+    padding: 3px;
+}
+
+.itensListaProdutos {
+    background-color: rgb(204, 204, 204);
+}
+
+.itensListaProdutos td{
+    border: 2px solid #000000;
+    padding: 3px;
+
+}
 /* FOOTER */
 
 footer {

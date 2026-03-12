@@ -12,15 +12,15 @@
     $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-    <table>
-        <thead>
+    <table class="listaProdutos">
+        <thead class="cabecalhoListaProdutos">
             <tr>
                 <th>ID</th>
                 <th>Nome Produto</th>
                 <th>Preço</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class=itensListaProdutos>
             <?php foreach ($produtos as $produto): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($produto['id']); ?></td>
