@@ -84,6 +84,29 @@ html {
     padding: 3px;
 
 }
+
+/* DELETAR PRODUTO */
+
+.card_excluirProdutos {
+    width: 400px;
+    height: 200px;
+
+    border-radius: 20px;
+    margin: auto;
+    padding: auto;
+
+    text-align: center;
+    display: collum ;
+}
+
+.campoDeExclusao {
+    margin: 10px;
+    width: 30px;
+    height: 20px;
+}
+
+
+
 /* FOOTER */
 
 footer {
