@@ -15,18 +15,28 @@
         }elseif(empty($preco)) {
             echo "Favor, informe o valor do produto";
         } else {
-            $sql = 'UPDATE produtos SET nome_produto = :nome, preco = :preco WHERE id = :id';
-        
+             // Select para armazenar em um array o banco
+            $sql = "SELECT * FROM produtos WHERE id = :id";
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':id', $produto_id);
-            $stmt->bindParam(':nome', $nome_produto);
-            $stmt->bindParam(':preco', $preco);
             $stmt->execute();
-            
-            echo "Produto editado com sucesso!";
-        }
 
-        
+            $produto = $stmt->fetch(PDO::FETCH_ASSOC);
+            //Verifica se retornou true na busca
+            if (!$produto) {
+                echo "Produto não encontrado";
+            } else {
+                $sql = 'UPDATE produtos SET nome_produto = :nome, preco = :preco WHERE id = :id';
+            
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindParam(':id', $produto_id);
+                $stmt->bindParam(':nome', $nome_produto);
+                $stmt->bindParam(':preco', $preco);
+                $stmt->execute();
+                
+                echo "Produto editado com sucesso!";
+            }
+        }
     }
 
 ?>
