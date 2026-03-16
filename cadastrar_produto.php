@@ -33,14 +33,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="form_card_cadastro">
     <form class="cadastro_de_produto" action="" method="POST">
         <div class="campos_form">
-            <label class="label_camposCadastroProduto">Nome do produto: </label>
-            <input class="campoCadastroProduto" type="text" name="nome_produto" placeholder="Insira o nome do produto..."> 
+            <label class="label_camposCadastroProduto">Cadastro de produto</label>
+            <div class="camposPreencher">
+                <input class="campoCadastroProduto" type="text" name="nome_produto" placeholder="Nome do produto"> 
+            </div>
         </div>
         <div class="campos_form">
-            <label class="label_camposCadastroProduto">Preço:</label>
-            <input class="campoCadastroProduto" type="number" name="preco" step="0.01" placeholder="Insira o preço do produto...">
+            <label class="label_camposCadastroProduto"></label>
+            <div class="camposPreencher">
+                <input class="campoCadastroProduto" id="preco" type="number" name="preco" step="0.01" placeholder="Preço produto">
+            </div>       
         </div>
-        <div class="campos_form">
+        <div class="botaoCadastro">
             <input class="botaoCadastroProduto" type="submit" value="Cadastrar">
         </div>
             
