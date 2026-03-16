@@ -14,12 +14,12 @@ Cada produto possui:
   - Nome
   - Preço
 
-Estrutura da Tabela
-CREATE TABLE produtos (
+Estrutura da Tabela: 
+  CREATE TABLE produtos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome_produto VARCHAR(100),
     preco DECIMAL(10,2)
-);
+  );
 
 Tecnologias utilizadas:
   - PHP
