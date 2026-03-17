@@ -25,7 +25,7 @@
                 <tr>
                     <td><?php echo htmlspecialchars($produto['id']); ?></td>
                     <td><?php echo htmlspecialchars($produto['nome_produto']); ?></td>
-                    <td><?php echo htmlspecialchars($produto['preco']); ?></td>
+                    <td><?php echo "R$ " . htmlspecialchars($produto['preco']); ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

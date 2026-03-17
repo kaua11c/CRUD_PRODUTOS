@@ -50,7 +50,7 @@
         <div class="labelEditarProduto">
             <label>Editar produto</label>
         </div>
-            <input type="number" name="id" placeholder="Insira o ID do produto">
+            <input class="id_editarProduto"type="number" name="id" placeholder="ID">
         <div>
             <input type="text" name="nome" placeholder="Insira o nome do produto"> 
         </div>
