@@ -15,17 +15,21 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif(empty($preco)) {
         echo "Preencha o preço do produto";
     } else {
-        //SQL
-        $sql = 'INSERT INTO produtos (nome_produto, preco) VALUES (:nome_produto, :preco)';
+        if($preco < -1) {
+            echo "Não é permitido inserir um valor negativo no preço";
+        } else {
+            //SQL
+            $sql = 'INSERT INTO produtos (nome_produto, preco) VALUES (:nome_produto, :preco)';
 
-        $stmt = $pdo->prepare($sql);
+            $stmt = $pdo->prepare($sql);
 
-        $stmt->bindParam(':nome_produto', $nome_produto);
-        $stmt->bindParam(':preco', $preco);
+            $stmt->bindParam(':nome_produto', $nome_produto);
+            $stmt->bindParam(':preco', $preco);
 
-        $stmt->execute();
+            $stmt->execute();
 
-        echo "Produto cadastrado com sucesso!";
+            echo "Produto cadastrado com sucesso!";
+        }
     }
 }
     

@@ -26,6 +26,9 @@
             if (!$produto) {
                 echo "Produto não encontrado";
             } else {
+                if($preco < -1) {
+                    echo "Não é permitido inserir um valor negativo no preço";
+                } else {
                 $sql = 'UPDATE produtos SET nome_produto = :nome, preco = :preco WHERE id = :id';
             
                 $stmt = $pdo->prepare($sql);
@@ -35,26 +38,31 @@
                 $stmt->execute();
                 
                 echo "Produto editado com sucesso!";
+                }
             }
         }
     }
 
 ?>
-    <form method="POST">
-        <div>
+
+<div class="cardEditarProduto">
+    <form class="campos_form"method="POST">
+        <div class="labelEditarProduto">
             <label>Editar produto</label>
         </div>
             <input type="number" name="id" placeholder="Insira o ID do produto">
         <div>
-            <input type="text" name="nome" placeholder="Insira o novo nome do produto"> 
+            <input type="text" name="nome" placeholder="Insira o nome do produto"> 
         </div>
         <div>
-            <input type="number" name="preco" placeholder="Insira o novo preco do produto">
+            <input type="number" name="preco" placeholder="Insira o preço do produto">
         </div>
         <div>
-            <input type="submit" value="Salvar">
+            <input class="botaoEditarProduto" type="submit" value="Salvar">
         </div>
     </form>
+</div>
+    
 <?php 
     include_once("template/footer.php");
 ?>
