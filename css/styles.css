@@ -62,6 +62,37 @@ html {
     color: rgba(108, 108, 108, 0.407);
 }
 
+/* INDEX */
+
+.conteudoIndex {
+    width: 900px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.imgProdutos {
+    display: flex;
+    justify-content: end;
+}
+
+.inicioIndex h1 {
+    background-color: cadetblue;
+    font-size: 50px;
+    /* padding-bottom: 10px; */
+}
+.inicioIndex h3 {
+    font-size: 20px;
+    background-color: cornflowerblue;
+    padding-bottom: 10px;
+}
+.inicioRodape {
+    background-color: aquamarine;
+    font-size: 16px;
+}
+
 /* CADASTRO DE PRODUTOS */
 
 .form_card_cadastro {

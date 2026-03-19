@@ -28,7 +28,7 @@
                 <a href="deletar_produto.php">Excluir</a>
             </li>
              <li class="opcao_acao_produto">
-                <a href="buscar_produto.php">Buscar</a>
+                <a href="buscar_produto.php"><i class="fa-solid fa-magnifying-glass"></i></a>
             </li>
         </ul>
         </div>

@@ -5,13 +5,20 @@
 
 ?>
 
-<div class="inicioIndex">
-    <h1>Bem-vindo ao Sistema de Produtos</h1>
-    <h3>Gerencie seus produtos de forma simples e eficiente</h2>
-</div>
-<div class="inicioRodape">
-    <p>Este sistema permite que você cadastre, edite, visualize e exclua produtos com facilidade. 
+
+
+<div class="conteudoIndex">
+    <div class="inicioIndex">
+        <h1>Bem-vindo ao Sistema de Produtos</h1>
+        <h3>Gerencie seus produtos de forma simples e eficiente</h2>
+    </div>
+    <div class="inicioRodape">
+        <p>Este sistema permite que você cadastre, edite, visualize e exclua produtos com facilidade. 
         Utilize o menu acima para navegar entre as funcionalidades e gerenciar seus itens.</p>
+    </div>
+</div>
+<div class="imgProdutos">
+    <img src="img/image.png" alt="imagemBonecoProduto">
 </div>
 
 <?php 
