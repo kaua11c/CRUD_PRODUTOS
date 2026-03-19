@@ -1,7 +1,6 @@
 <?php
     include_once("helpers/connection.php");
     include_once("template/header.php");
-    include_once("template/menu.php");
 
     //Basicamente faz o código rodar apenas com o envio do formulário
     if($_SERVER['REQUEST_METHOD'] === 'POST') {

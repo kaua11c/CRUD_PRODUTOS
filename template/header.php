@@ -12,8 +12,25 @@
     <title>Produtos</title>
 </head>
 <body>
-    <div class="titulo_produtos">
-        <h1 class="tituloProduto">
-            PRODUTOS
-        </h1>
+    <div class="menuBar">
+        <a href="index.php" class="tituloProduto">PRODUTOS</a>
+        <ul class="opcoes_menu">
+            <li class="opcao_acao_produto">
+                    <a href="cadastrar_produto.php">Cadastrar</a>
+            </li>
+            <li class="opcao_acao_produto">
+                <a href="listar_produto.php">Produtos</a>
+            </li>
+            <li class="opcao_acao_produto">
+                <a href="editar_produto.php">Editar</a>
+            </li>
+            <li class="opcao_acao_produto">
+                <a href="deletar_produto.php">Excluir</a>
+            </li>
+             <li class="opcao_acao_produto">
+                <a href="buscar_produto.php">Buscar</a>
+            </li>
+        </ul>
+        </div>
+        
     </div>
