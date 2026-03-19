@@ -1,5 +1,8 @@
 <?php
-    require_once 'template/header.php';
+    include_once("helpers/connection.php");
+    include_once("template/header.php");
+    include_once("template/menu.php");
+
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nome_produto = $_POST['nome_produto'];

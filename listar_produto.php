@@ -1,6 +1,7 @@
 <?php
     include_once("helpers/connection.php");
     include_once("template/header.php");
+    include_once("template/menu.php");
 
     //SQL 
     $sql = 'SELECT * FROM produtos';
@@ -26,6 +27,18 @@
                     <td><?php echo htmlspecialchars($produto['id']); ?></td>
                     <td><?php echo htmlspecialchars($produto['nome_produto']); ?></td>
                     <td><?php echo "R$ " . htmlspecialchars($produto['preco']); ?></td>
+                    <td>
+                        <form action="testeButtonExcluir.php" method="POST">
+                            <input type="hidden" name="excluir_id" value="<?= $produto['id'] ?>">
+                            <button class="botaoExcluirProduto" type="submit" onclick="return confirm('Tem certeza que deseja excluir?')"><i class="fa-solid fa-trash"></i></button>
+                        </form>         
+                    </td>
+                    <td>
+                        <form action="testeEditProduto.php" method="POST">
+                            <input type="hidden" name="id_produto" value="<?= $produto['id'] ?>">
+                            <button class="botaoEditProduto" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </form>         
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

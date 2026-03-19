@@ -188,6 +188,17 @@ html {
 
 }
 
+.botaoExcluirProduto {
+    border: none;
+    cursor: pointer;
+}
+
+.botaoExcluirProduto:hover {
+    transition: 0.7s;
+    background-color: transparent;
+    color: rgba(255, 0, 0, 0.622);
+}
+
 /* DELETAR PRODUTO */
 
 .card_excluirProdutos {
