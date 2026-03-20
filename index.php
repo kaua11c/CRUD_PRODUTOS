@@ -17,9 +17,6 @@
         Utilize o menu acima para navegar entre as funcionalidades e gerenciar seus itens.</p>
     </div>
 </div>
-<div class="imgProdutos">
-    <img src="img/image.png" alt="imagemBonecoProduto">
-</div>
 
 <?php 
     include_once("template/footer.php");

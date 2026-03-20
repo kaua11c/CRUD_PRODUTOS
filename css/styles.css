@@ -73,11 +73,6 @@ html {
     margin-top: 100px;
 }
 
-.imgProdutos {
-    display: flex;
-    justify-content: end;
-}
-
 .inicioIndex h1 {
     background-color: cadetblue;
     font-size: 50px;
