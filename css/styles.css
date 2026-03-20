@@ -22,9 +22,11 @@ html {
 
 .menuBar {
     display:flex;
+    background-color: rgba(201, 201, 201, 0.485);
+    padding: 20px;
     justify-content: space-between; /* Separa entre direita e esquerda os itens */
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 50px;
 
 }
 .tituloProduto {
@@ -65,27 +67,25 @@ html {
 /* INDEX */
 
 .conteudoIndex {
-    width: 900px;
-    background-color: antiquewhite;
+    width: 800px;
     display: flex;
     flex-direction: column;
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .inicioIndex h1 {
-    background-color: cadetblue;
-    font-size: 50px;
+    font-size: 80px;
     /* padding-bottom: 10px; */
 }
 .inicioIndex h3 {
-    font-size: 20px;
-    background-color: cornflowerblue;
+    color: rgb(60, 60, 60);
+    margin-top: 20px;
+    font-size: 30px;
     padding-bottom: 10px;
 }
 .inicioRodape {
-    background-color: aquamarine;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* CADASTRO DE PRODUTOS */
@@ -296,7 +296,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #ffffff05;
+    background-color: rgba(201, 201, 201, 0.485);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid #ffffff05;

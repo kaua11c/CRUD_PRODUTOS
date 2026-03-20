@@ -25,7 +25,7 @@
                 <a href="editar_produto.php">Editar</a>
             </li>
             <li class="opcao_acao_produto">
-                <a href="deletar_produto.php">Excluir</a>
+                <a href="deletar_produto.php"><i class="fa-solid fa-trash"></i></a>
             </li>
              <li class="opcao_acao_produto">
                 <a href="buscar_produto.php"><i class="fa-solid fa-magnifying-glass"></i></a>
