@@ -20,7 +20,7 @@
                 <th>Preço</th>
             </tr>
         </thead>
-        <tbody class=itensListaProdutos>
+        <tbody class="itensListaProdutos">
             <?php foreach ($produtos as $produto): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($produto['id']); ?></td>

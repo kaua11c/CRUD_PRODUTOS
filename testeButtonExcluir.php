@@ -1,5 +1,6 @@
 <?php
     include_once("helpers/connection.php");
+    
 
     $excluir_id = $_POST['excluir_id'];
 

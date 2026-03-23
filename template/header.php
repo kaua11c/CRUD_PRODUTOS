@@ -28,7 +28,7 @@
                 <a href="deletar_produto.php"><i class="fa-solid fa-trash"></i></a>
             </li>
              <li class="opcao_acao_produto">
-                <a href="buscar_produto.php"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="testeBuscarProduto.php"><i class="fa-solid fa-magnifying-glass"></i></a>
             </li>
         </ul>
         </div>
