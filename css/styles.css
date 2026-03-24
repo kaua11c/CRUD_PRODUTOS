@@ -36,6 +36,12 @@ html {
     margin-left: 15px;
     cursor: pointer;
 }
+
+.menuBar a img{
+    height: 15px;
+    width: auto;
+}
+
 .tituloProduto:hover {
     transition: 0.5s;
     color: rgba(108, 108, 108, 0.407);
@@ -236,6 +242,46 @@ html {
     transition: 0.7s;
     background-color: transparent;
     color: rgba(255, 0, 0, 0.622);
+}
+
+/* BUSCAR PRODUTO */
+
+.cardListaProdutos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    
+}
+
+.buscarProduto {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:center;
+    color: black;
+}
+
+.buscarProduto input {
+    background-color: rgba(128, 128, 128, 0.164);
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.buscarProduto button {
+    background: rgba(128, 128, 128, 0.397);
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.buscarProduto a {
+    padding: 5px;
+    list-style: none;
+    color: black;
+
 }
 
 /* DELETAR PRODUTO */

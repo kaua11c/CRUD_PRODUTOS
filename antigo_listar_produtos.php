@@ -1,19 +1,17 @@
 <?php
     include_once("helpers/connection.php");
     include_once("template/header.php");
+
+    //SQL 
+    $sql = 'SELECT * FROM produtos';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    // Aqui eu defino na váriavel utilizando o fetchAll transformando todos os produtos em um array associativo com o FETCH_ASSOC
+    //$produtos virou um array com todos os produtos
+    $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
-
-<div class="cardListaProdutos">
-    <form class="buscarProduto" action="" method="GET">
-        
-        <input name="buscarProduto" type="search" placeholder="Buscar produto" value="<?php echo $_GET['buscarProduto'] ?? ''; ?>">
-        
-        <button type="submit"><i class="fa fa-search"></i> </button>
-
-        <!-- <a href= "listar_produto.php"><i class="fa-solid fa-x"></i></a> -->
-    
-    </form>
-
     <table class="listaProdutos">
         <thead class="cabecalhoListaProdutos">
             <tr>
@@ -22,25 +20,8 @@
                 <th>Preço</th>
             </tr>
         </thead>
-
-        <?php 
-        $buscarProduto = $_GET['buscarProduto'] ?? '';
-
-        if(!empty($buscarProduto)) {
-
-            $sql = "SELECT * FROM produtos WHERE nome_produto LIKE :buscarProduto";
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindValue(':buscarProduto','%' . $buscarProduto . '%');
-            $stmt->execute(); 
-            $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        } else {
-            $produtos = $pdo->query("SELECT * FROM produtos")->fetchAll(PDO::FETCH_ASSOC);
-        }
-        ?>
-
         <tbody class="itensListaProdutos">
-            <?php foreach ($produtos as $produto): ?> <!-- CORRIGIDO AQUI -->
+            <?php foreach ($produtos as $produto): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($produto['id']); ?></td>
                     <td><?php echo htmlspecialchars($produto['nome_produto']); ?></td>
@@ -61,5 +42,8 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-</div>
 
+
+<?php 
+    include_once("template/footer.php");
+?>

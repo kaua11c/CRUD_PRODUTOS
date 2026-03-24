@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="menuBar">
-        <a href="index.php" class="tituloProduto">PRODUTOS</a>
+        <a href="index.php" class="tituloProduto"><img src="img/logoCrudProdutos.png" alt="" srcset=""></a>
         <ul class="opcoes_menu">
             <li class="opcao_acao_produto">
                     <a href="cadastrar_produto.php">Cadastrar</a>
@@ -27,9 +27,9 @@
             <li class="opcao_acao_produto">
                 <a href="deletar_produto.php"><i class="fa-solid fa-trash"></i></a>
             </li>
-             <li class="opcao_acao_produto">
+<!--              <li class="opcao_acao_produto">
                 <a href="testeBuscarProduto.php"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
+            </li> -->
         </ul>
         </div>
         
