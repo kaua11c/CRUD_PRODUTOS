@@ -244,6 +244,16 @@ html {
     color: rgba(255, 0, 0, 0.622);
 }
 
+.botaoEditProduto {
+    border: none;
+    cursor: pointer;
+}
+
+.botaoEditProduto:hover {
+    transition: 0.7s;
+    background-color: transparent;
+    color: rgba(0, 64, 255, 0.622);
+}
 /* BUSCAR PRODUTO */
 
 .cardListaProdutos {

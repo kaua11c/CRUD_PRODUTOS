@@ -52,14 +52,19 @@
                         </form>         
                     </td>
                     <td>
-                        <form action="testeEditProduto.php" method="POST">
-                            <input type="hidden" name="id_produto" value="<?= $produto['id'] ?>">
-                            <button class="botaoEditProduto" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
-                        </form>         
+                        <a href="testeEditProduto.php?id=<?php echo $produto['id']; ?>">
+                            <button class="botaoEditProduto">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </a>       
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 </div>
+
+<?php 
+    require_once 'template/footer.php';
+?>
 
