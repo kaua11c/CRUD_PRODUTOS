@@ -1,50 +1,15 @@
 <?php
     include_once("helpers/connection.php");
-    include_once("template/header.php");
+    
 
+    $excluir_id = $_POST['excluir_id'];
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $sql = "DELETE FROM produtos WHERE id = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $excluir_id);
+    $stmt->execute();
 
-        $produto_id = $_POST['id'] ?? null;
-        if(empty($produto_id)) {
-            echo "Favor informe o ID";
-        } else {
-            // Select para armazenar em um array o banco
-            $sql = "SELECT * FROM produtos WHERE id = :id";
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':id', $produto_id);
-            $stmt->execute();
+    // Volta para a lista de produtos apos excluir
+    header("Location: listar_produto.php");
+    exit;
 
-            $produto = $stmt->fetch(PDO::FETCH_ASSOC);
-            //Verifica se retornou true na busca
-            if (!$produto) {
-                echo "Produto não encontrado";
-            } else {
-                // Delete do ID informado
-                $sql = 'DELETE FROM produtos WHERE id = :id';
-                $stmt = $pdo->prepare($sql);
-                $stmt->bindParam(':id', $produto_id);
-                $stmt->execute();
-
-                echo "Produto $produto_id deletado";
-            }
-        }
-    }
-?>
-
-    <form class="card_excluirProdutos" method="POST">
-        <div>
-            <label class="labelExcluir"> Informe o ID do produto que deseja excluir</label>
-        </div>
-        <div>
-            <input class="campoDeExclusao" type="number" name="id">
-        </div>
-        <div>
-            <input class="botaoDelete"type="submit" value="Deletar">
-        </div>
-        
-    </form>
-
-<?php 
-    include_once("template/footer.php");
-?>

@@ -21,9 +21,9 @@
             <li class="opcao_acao_produto">
                 <a href="listar_produto.php">Produtos</a>
             </li>
-            <li class="opcao_acao_produto">
+            <!-- <li class="opcao_acao_produto">
                 <a href="editar_produto.php">Editar</a>
-            </li>
+            </li> -->
             <!-- <li class="opcao_acao_produto">
                 <a href="deletar_produto.php"><i class="fa-solid fa-trash"></i></a>
             </li> -->

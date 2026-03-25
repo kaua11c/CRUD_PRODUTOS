@@ -46,13 +46,13 @@
                     <td><?php echo htmlspecialchars($produto['nome_produto']); ?></td>
                     <td><?php echo "R$ " . htmlspecialchars($produto['preco']); ?></td>
                     <td>
-                        <form action="testeButtonExcluir.php" method="POST">
+                        <form action="deletar_produto.php" method="POST">
                             <input type="hidden" name="excluir_id" value="<?= $produto['id'] ?>">
                             <button class="botaoExcluirProduto" type="submit" onclick="return confirm('Tem certeza que deseja excluir?')"><i class="fa-solid fa-trash"></i></button>
                         </form>         
                     </td>
                     <td>
-                        <a href="testeEditProduto.php?id=<?php echo $produto['id']; ?>">
+                        <a href="editar_produto.php?id=<?php echo $produto['id']; ?>">
                             <button class="botaoEditProduto">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
