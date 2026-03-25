@@ -13,7 +13,10 @@
 </head>
 <body>
     <div class="menuBar">
-        <a href="index.php" class="tituloProduto"><img src="img/logoCrudProdutos.png" alt="" srcset=""></a>
+        <div class="logo_produtos">
+            <a href="index.php" class="tituloProduto"><img src="img/logoCrudProdutos.png" alt="" srcset=""></a>
+        </div>
+        
         <ul class="opcoes_menu">
             <li class="opcao_acao_produto">
                     <a href="cadastrar_produto.php">Cadastrar</a>
