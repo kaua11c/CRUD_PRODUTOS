@@ -41,7 +41,7 @@
         ?>
 
         <tbody class="itensListaProdutos">
-            <?php foreach ($produtos as $produto): ?> <!-- CORRIGIDO AQUI -->
+            <?php foreach ($produtos as $produto): ?> 
                 <tr>
                     <td><?php echo htmlspecialchars($produto['id']); ?></td>
                     <td><?php echo htmlspecialchars($produto['nome_produto']); ?></td>
