@@ -240,6 +240,7 @@ html {
 }
 
 .botaoExcluirProduto {
+    background-color: transparent;
     border: none;
     cursor: pointer;
 }
@@ -251,6 +252,7 @@ html {
 }
 
 .botaoEditProduto {
+    background-color: transparent;
     border: none;
     cursor: pointer;
 }
@@ -260,6 +262,19 @@ html {
     background-color: transparent;
     color: rgba(0, 64, 255, 0.622);
 }
+
+.botaoAddEstoque {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.botaoAddEstoque:hover {
+    transition: 0.7s;
+    background-color: transparent;
+    color: rgba(33, 82, 2, 0.622);
+}
+
 /* BUSCAR PRODUTO */
 
 .cardListaProdutos {

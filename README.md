@@ -8,17 +8,21 @@ Funcionalidades:
   - Listar produtos
   - Editar produto
   - Excluir produto
+  - Alterar estoque do produto
+  - Vender produto
 
 Cada produto possui:
   - ID
   - Nome
   - Preço
+  - Estoque
 
 Estrutura da Tabela: 
   CREATE TABLE produtos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome_produto VARCHAR(100),
     preco DECIMAL(10,2)
+    estoque INT UNSIGNED DEFAULT 0
   );
 
 Tecnologias utilizadas:

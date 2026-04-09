@@ -42,12 +42,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     <select name="id">
         <?php foreach ($produtos as $produto): ?> 
             <option value="<?= $produto['id'] ?>">
-                <?= $produto['nome_produto'] ?>
+                <?= $produto['nome_produto'] ?> |
+                Estoque atual: <?= $produto['estoque'] ?> 
             </option>
 
         <?php endforeach; ?>
     </select>
 
-    <input type="text" name="pedido"> 
+    <input type="text" name="pedido">
     <input type="submit" value="Salvar">
 </form>
