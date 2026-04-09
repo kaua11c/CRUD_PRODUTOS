@@ -19,6 +19,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome Produto</th>
+                <th>Estoque</th>
                 <th>Preço</th>
             </tr>
         </thead>
@@ -44,6 +45,7 @@
                 <tr>
                     <td><?php echo htmlspecialchars($produto['id']); ?></td>
                     <td><?php echo htmlspecialchars($produto['nome_produto']); ?></td>
+                    <td><?php echo htmlspecialchars($produto['estoque']); ?></td>
                     <td><?php echo "R$ " . htmlspecialchars($produto['preco']); ?></td>
                     <td>
                         <form action="deletar_produto.php" method="POST">

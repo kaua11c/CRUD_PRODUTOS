@@ -19,20 +19,24 @@ if ($id) {
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome_produto = $_POST['nome'] ?? null;
     $preco = $_POST['preco'] ?? null;
+    $estoque = $_POST['estoque'] ?? null;
     $id = $_POST['id'] ?? null;
 
 
     
     if(empty($nome_produto)) {
         echo "Não é permitido deixar o campo nome em branco";
+    } elseif($estoque < 0) {
+        echo "Não é permitido adicionar uma quantidade negativa para o estoque do produto";
     } elseif($preco < 0) {
-        echo "Não é permitido adicionar um preço negativo para o produto";
+        echo "Não é permitido adicionar um preço negativo para valor do produto";
     } else {
-        $sql = 'UPDATE produtos SET nome_produto = :nome, preco = :preco WHERE id = :id';
+        $sql = 'UPDATE produtos SET nome_produto = :nome, estoque = :estoque, preco = :preco WHERE id = :id';
 
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':nome', $nome_produto);
+        $stmt->bindParam(':estoque', $estoque);
         $stmt->bindParam(':preco', $preco);
         $stmt->execute();
     }
@@ -49,6 +53,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="hidden" name="id" value="<?php echo $produto['id'] ?? ''; ?>">
         <div>
             <input type="text" name="nome" value="<?php echo $produto['nome_produto'] ?? ''; ?>">
+        </div>
+        <div>
+            <input type="text" name="estoque" value="<?php echo $produto['estoque'] ?? ''; ?>">
         </div>
         <div>
             <input type="number" name="preco" value="<?php echo $produto['preco'] ?? ''; ?>">
