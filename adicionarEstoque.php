@@ -18,8 +18,12 @@ if ($id) {
 }
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') { 
+    
+    $adicionarEstoque = $_POST['adicionarEstoque'] ?? null;
     $id = $_POST['id'] ?? null;
-    $adionarEstoque = $_POST['adicionarEstoque'] ?? null;
+    $nome_produto = $_POST['nome'] ?? null;
+
+
 
     $sql = "UPDATE produtos SET estoque = estoque + :adicionarEstoque WHERE id = :id";
     $stmt = $pdo->prepare($sql);
@@ -31,4 +35,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-<form action=""></form>
+<form action="" method="POST">
+    <label for="">Adicione a quantidade de estoque do produto: ?></label>
+    <input type="hidden" name="id" value="<?php echo $produto['id'] ?? ''; ?>">
+    <input type="text" name="adicionarEstoque" id="">
+    <input type="submit" value="Salvar">
+</form>
