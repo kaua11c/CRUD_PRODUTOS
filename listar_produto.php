@@ -57,11 +57,19 @@
                         </a>       
                     </td>
 
+
                     <td>
-                        <form action="adicionarEstoque.php" method="POST">
+
+                        <a href="adicionarEstoque.php?id=<?php echo $produto['id']; ?>">
+                            <button class="botaoAddEstoque">
+                                <i class="fa-solid fa-warehouse"></i>
+                            </button>
+                        </a>  
+
+                        <!-- <form action="adicionarEstoque.php" method="POST">
                             <input type="hidden" name="adicionar_estoque" value="<?= $produto['id'] ?>">
                             <button class="botaoAddEstoque" type="submit"><i class="fa-solid fa-warehouse"></i></button>
-                        </form>    
+                        </form>   -->  
                     </td>
 
                     <td>
