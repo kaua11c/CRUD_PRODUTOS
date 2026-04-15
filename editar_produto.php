@@ -39,6 +39,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':estoque', $estoque);
         $stmt->bindParam(':preco', $preco);
         $stmt->execute();
+
+        // Volta para a lista de produtos apos excluir
+        header("Location: listar_produto.php");
+        exit;
     }
 }
 

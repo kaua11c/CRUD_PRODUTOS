@@ -1,0 +1,79 @@
+.listaProdutos {
+    width: 600px;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.cabecalhoListaProdutos {
+    background: rgba(95, 95, 95, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.cabecalhoListaProdutos th { 
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Arredondamento do header */
+.cabecalhoListaProdutos th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.cabecalhoListaProdutos th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* Linhas */
+.itensListaProdutos tr {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.itensListaProdutos tr:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(220, 33, 94, 0.2);
+}
+
+.itensListaProdutos td {
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Botões */
+.botaoExcluirProduto,
+.botaoEditProduto,
+.botaoAddEstoque {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover individuais */
+.botaoExcluirProduto:hover {
+    color: rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.botaoEditProduto:hover {
+    color: rgba(0, 128, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.3);
+}
+
+.botaoAddEstoque:hover {
+    color: rgba(57, 255, 20, 0.9);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}

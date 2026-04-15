@@ -4,23 +4,24 @@
 ?>
 
 <div class="cardListaProdutos">
-    <form class="buscarProduto" action="" method="GET">
-        
-        <input name="buscarProduto" type="search" placeholder="Buscar produto" value="<?php echo $_GET['buscarProduto'] ?? ''; ?>">
-        
-        <button type="submit"><i class="fa fa-search"></i> </button>
-
-        <!-- <a href= "listar_produto.php"><i class="fa-solid fa-x"></i></a> -->
+    <div class="cardBuscarProduto">
+        <form class="buscarProduto" action="" method="GET">
+            <input name="buscarProduto" type="search" placeholder="Buscar produto" value="<?php echo $_GET['buscarProduto'] ?? ''; ?>">
+            
+            <button type="submit"><i class="fa fa-search"></i> </button>
+        </form>
+    </div>
     
-    </form>
 
     <table class="listaProdutos">
         <thead class="cabecalhoListaProdutos">
             <tr>
+                
                 <th>ID</th>
                 <th>Nome Produto</th>
                 <th>Estoque</th>
                 <th>Preço</th>
+                <th colspan="3">Ações</th>
             </tr>
         </thead>
 
@@ -59,17 +60,11 @@
 
 
                     <td>
-
                         <a href="adicionarEstoque.php?id=<?php echo $produto['id']; ?>">
                             <button class="botaoAddEstoque">
                                 <i class="fa-solid fa-warehouse"></i>
                             </button>
                         </a>  
-
-                        <!-- <form action="adicionarEstoque.php" method="POST">
-                            <input type="hidden" name="adicionar_estoque" value="<?= $produto['id'] ?>">
-                            <button class="botaoAddEstoque" type="submit"><i class="fa-solid fa-warehouse"></i></button>
-                        </form>   -->  
                     </td>
 
                     <td>

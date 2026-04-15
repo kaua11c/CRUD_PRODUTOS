@@ -35,20 +35,22 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-<form action="" method="POST">
+<div class="cardVenda">
+    <form class="formVenda" method="POST">
 
-    <label for="">Vender produto</label>
+        <label for="">Vender produto</label>
 
-    <select name="id">
-        <?php foreach ($produtos as $produto): ?> 
-            <option value="<?= $produto['id'] ?>">
-                <?= $produto['nome_produto'] ?> |
-                Estoque atual: <?= $produto['estoque'] ?> 
-            </option>
+        <select name="id">
+            <?php foreach ($produtos as $produto): ?> 
+                <option value="<?= $produto['id'] ?>">
+                    <?= $produto['nome_produto'] ?> |
+                    Estoque atual: <?= $produto['estoque'] ?> 
+                </option>
 
-        <?php endforeach; ?>
-    </select>
+            <?php endforeach; ?>
+        </select>
 
-    <input type="text" name="pedido">
-    <input type="submit" value="Salvar">
-</form>
+        <input class="vendaPedido" type="text" name="pedido">
+        <input class="salvarPedido" type="submit" value="Salvar">
+    </form>
+</div>
