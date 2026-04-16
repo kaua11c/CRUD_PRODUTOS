@@ -110,16 +110,19 @@ html {
 
 .inicioIndex h1 {
     font-size: 80px;
+    color:white;
     /* padding-bottom: 10px; */
 }
 .inicioIndex h3 {
-    color: rgb(60, 60, 60);
+    color: #c6b3ff;
     margin-top: 20px;
     font-size: 30px;
     padding-bottom: 10px;
 }
+
 .inicioRodape {
     font-size: 18px;
+    color: #d0cdda
 }
 
 /* CADASTRO DE PRODUTOS */
@@ -307,24 +310,45 @@ html {
 .itensListaProdutos td {
     padding: 5px;
     border-radius: 5px;
+}
 
+.botaoEditProduto {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px; /* padding para aumentar tamanho do table */
+}
+
+.botaoAddEstoque {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.botaoExcluirProduto {
+    background-color: transparent;
+    color: white;
+    border: none;
 }
 
 /* BUSCAR PRODUTO */
 
 
 .cardListaProdutos {
-    background-color: green;
     display: flex;
     flex-direction: column;
 }
 
 .cardBuscarProduto {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     margin: auto;
-    height: fit-content;
+    height: 40px;
     width: fit-content;
-    background-color: red;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .buscarProduto {
@@ -335,31 +359,33 @@ html {
 }
 
 .buscarProduto input {
+    padding: 10px;
     background-color: rgba(128, 128, 128, 0.164);
     outline: none;
-    padding: 5px;
-    border-radius: 10px;
     border: none;
+    font-size: 14px;
 }
 
 .buscarProduto input::placeholder {
     color: white;
 }
 
-.buscarProduto button {
-    background: rgba(128, 128, 128, 0.397);
-    border-radius: 20px;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-
+.buscarProduto input {
+    color: white;
 }
 
-.buscarProduto a {
-    padding: 5px;
-    list-style: none;
-    color: #12092E;
+.buscarProduto button {
+    color: white;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
 
+.buscarProduto button:hover {
+    color: #12092E;
+    transition: 0.5s;
 }
 
 /* VENDA DE PRODUTO */
