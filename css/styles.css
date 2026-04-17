@@ -317,18 +317,40 @@ html {
     color: white;
     border: none;
     padding: 5px; /* padding para aumentar tamanho do table */
+    cursor: pointer;
+}
+
+.botaoEditProduto:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    color: rgb(64, 147, 255);
+    /* box-shadow: 0 0 5px rgba(64, 0, 255, 0.3); */
 }
 
 .botaoAddEstoque {
     background-color: transparent;
     color: white;
     border: none;
+    cursor: pointer;
+}
+
+.botaoAddEstoque:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    color: rgb(105, 255, 67);
 }
 
 .botaoExcluirProduto {
     background-color: transparent;
     color: white;
     border: none;
+    cursor: pointer;
+}
+
+.botaoExcluirProduto:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    color: rgb(239, 8, 8);
 }
 
 /* BUSCAR PRODUTO */
