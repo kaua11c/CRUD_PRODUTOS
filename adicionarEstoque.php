@@ -38,9 +38,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-<form action="" method="POST">
-    <label for="">Adicione a quantidade de estoque do produto: <strong> <?= $produto['nome_produto'] ?> </strong> </label>
-    <input type="hidden" name="id" value="<?php echo $produto['id'] ?? ''; ?>">
-    <input type="text" name="adicionarEstoque" id="">
-    <input type="submit" value="Salvar">
+<form class="addEstoque" action="" method="POST">
+    <label for="">Adicione a quantidade de estoque do produto: <br> <strong> <?= $produto['nome_produto'] ?> </strong> </label>
+    <input class="produtoAddEstoque" type="hidden" name="id" value="<?php echo $produto['id'] ?? ''; ?>">
+    <input class="quantidadeAddEstoque" type="text" name="adicionarEstoque" id="">
+    <input class="botaoEditarProduto" type="submit" value="Salvar">
 </form>

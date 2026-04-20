@@ -10,9 +10,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $preco = $_POST['preco'];
 
     //Verifica se as variáveis estão vazias
-    /* if(!empty($nome_produto) && !empty($preco)) {
-        
-    } */
 
     if(empty($nome_produto)) {
         echo "Preencha o nome do produto";
@@ -47,9 +44,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
         <div class="campos_form">
-            <label class="label_camposCadastroProduto"></label>
             <div class="camposPreencher">
-                <input class="campoCadastroProduto" id="preco" type="number" name="preco" step="0.01" placeholder="Preço produto">
+                <input class="campoCadastroPreco" id="preco" type="number" name="preco" step="0.01" placeholder="Preço produto">
             </div>       
         </div>
         <div class="botaoCadastro">

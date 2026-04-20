@@ -54,3 +54,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input class="salvarPedido" type="submit" value="Salvar">
     </form>
 </div>
+
+<?php 
+    require_once 'template/footer.php';
+?>
