@@ -2,7 +2,7 @@
     include_once("helpers/connection.php");
     include_once("template/header.php");
 
-    $MensagemProdutoCadastrado = "Produto cadastrado com sucesso!";
+    $mensagem = "";
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $stmt->execute();
 
-            echo $MensagemProdutoCadastrado;
+            $mensagem = "Produto cadastrado";
         }
     }
 }
@@ -52,6 +52,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input class="botaoCadastroProduto" type="submit" value="Cadastrar">
         </div>
     </form>
+    <?php if(!empty($mensagem)) { ?>
+        <p class="mensagem"><?php echo $mensagem; ?></p>
+    <?php } ?>
 </div>
 
 

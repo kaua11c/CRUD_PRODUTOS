@@ -278,6 +278,12 @@ html {
     color: rgb(0, 255, 76);
 }
 
+.mensagem {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
 /* ADICIONAR ESTOQUE */
 
 .addEstoque {
